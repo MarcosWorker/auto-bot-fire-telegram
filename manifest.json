@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name": "AutoBotFire",
+    "description": "É um bot que joga automaticamente nas roletas da bet365 e na betano",
+    "version": "1.0",
+    "icons": {
+        "16": "assets/icon.png",
+        "48": "assets/icon.png",
+        "128": "assets/icon.png"
+    },
+    "action": {
+        "default_icon": {
+            "16": "assets/icon.png",
+            "24": "assets/icon.png",
+            "32": "assets/icon.png"
+        },
+        "default_title": "Bot Fire",
+        "default_popup": "popup/popup.html"
+    },
+    "background": {
+        "service_worker": "firebase.js",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://cachedownload-br.p-content.gambling-malta.com/live/bundles/*",
+                "https://dl-com.c365play.com/live_desktop/bundles/*"
+            ],
+            "js": [
+                "content/contentScript.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "permissions": [
+        "storage"
+    ]
+}

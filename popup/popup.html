@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <title>Bot Auto</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../popup/popup.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <form>
+        <label id="labelConfig">CONFIGURAÇÃO</label>
+        
+        <span id="txtVoisins"></span>
+        <input id="inputVoisins" type="range" min="0" max="20" step="1.0">
+
+        <span id="txtFicha"></span>
+        <input id="inputFicha" type="range" min="1" max="14" step="1.0">
+
+        <span id="txtGain"></span>
+        <input id="inputGain" type="range" min="1" max="100" step="1.0">
+
+        <span id="txtLoss"></span>
+        <input id="inputLoss" type="range" min="1" max="100" step="1.0">
+
+        <span id="txtGale"></span>
+        <input id="inputGale" type="range" min="0" max="10" step="1.0">
+
+        <button id="btnSalvar" type="button">SALVAR</button>
+
+        <label id="labelLogin">AutoBotFire</label>
+        <input type="text" id="email" placeholder="email">
+        </br>
+        <input type="password" id="password" placeholder="password">
+        <button id="btnLiberar" type="button">LIBERAR BOT</button>
+    </form>
+</body>
+<script src="popup.js"></script>
+
+</html>
